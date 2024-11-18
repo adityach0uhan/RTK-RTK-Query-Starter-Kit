@@ -1,0 +1,27 @@
+# See https://nextjs.org/docs/basic-features/eslint#lint-staged
+# for more information about the lint-staged configuration.
+
+# dependencies
+./node_modules
+/node_modules
+
+# next.js
+/.next
+/out
+/build
+
+# production
+.env.production
+
+# misc
+.DS_Store
+*.pem
+
+# local env files
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# vercel
+.vercel

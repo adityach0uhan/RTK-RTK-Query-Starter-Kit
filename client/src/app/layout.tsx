@@ -1,5 +1,5 @@
-import type { Metadata } from 'next';
 import './globals.css';
+import StoreProvider from '@/provider/redux/StoreProvider';
 
 export default function RootLayout({
     children
@@ -8,7 +8,9 @@ export default function RootLayout({
 }>) {
     return (
         <html lang='en'>
-            <body className={` antialiased`}>{children}</body>
+            <body suppressContentEditableWarning suppressHydrationWarning>
+                <StoreProvider>{children}</StoreProvider>
+            </body>
         </html>
     );
 }
